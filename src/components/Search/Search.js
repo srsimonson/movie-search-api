@@ -20,6 +20,7 @@ function Search() {
 
   return (
     <>
+    <h1>*********************************</h1>
       <input value={query} onChange={e => setQuery(e.target.value)} />
       <ul>
         {data.hits.map(item => (
@@ -28,6 +29,7 @@ function Search() {
           </li>
         ))}
       </ul>
+      <h1>*********************************</h1>
     </>
   );
 }

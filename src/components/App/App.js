@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import logo from '../../logo.svg';
 import './App.css';
+import FetchHook from '../../components/Search/FetchHook';
 import MovieList from '../../components/Search/MovieList';
 import Search from '../../components/Search/Search';
 import Thumbs from '../../components/Search/Thumbs';
@@ -25,6 +26,7 @@ class App extends Component {
         </a>
       </header>
     </div> */}
+    <FetchHook/>
     <Search/>
     <Thumbs/>
     <MovieList/>
