@@ -27,9 +27,9 @@ class App extends Component {
       </header>
     </div> */}
     <FetchHook/>
-    <Search/>
-    <Thumbs/>
     <MovieList/>
+    <Thumbs/>
+    <Search/>
     </>
   );}
 }

@@ -20,7 +20,7 @@ function Search() {
 
   return (
     <>
-    <h1>*********************************</h1>
+    <h1>*************SEARCH.js********************</h1>
       <input value={query} onChange={e => setQuery(e.target.value)} />
       <ul>
         {data.hits.map(item => (

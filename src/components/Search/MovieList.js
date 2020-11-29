@@ -38,10 +38,11 @@ class MovieList extends Component {
 
     render() {
         let title = this.state.displayMovie.titles && this.state.displayMovie.titles[0].title
-        console.log('this.state: ', this.state.displayMovie.titles && this.state.displayMovie.titles[0].title);
+        console.log('ML this.state: ', this.state.displayMovie.titles && this.state.displayMovie.titles[0].title);
         
         return (
             <div>
+                <h1>************************</h1>
                 <h1>MovieList</h1>
                     <p>{title}</p>
             </div>
