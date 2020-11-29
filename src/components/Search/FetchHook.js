@@ -37,13 +37,13 @@ function FetchHook() {
     return (
         <>
         <h1>FETCH HOOK</h1>
-            {/* <ul>
+            <ul>
                 {data.hits.map(item => (
                     <li key={item.objectID}>
                         <a href={item.url}>{item.title}</a>
                     </li>
                 ))}
-            </ul> */}
+            </ul>
         </>
     )
 }

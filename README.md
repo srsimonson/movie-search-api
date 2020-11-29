@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# API Instructions:
+We’re building a small web application that allows a user to search for a movie title, click on that movie title for more information, and give that movie a thumbs up or thumbs down. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Deliverables:
 
-## Available Scripts
+[ ] Search functionality that allows a user to enter a title and receive back movie information. 
+ - (Choose a free API for movie data. https://rapidapi.com/collection/movie-apis OR any API that provides this info!)
 
-In the project directory, you can run:
+[ ] A user should be able to look through title results, if there are more than one, and choose one to read more about. 
+ - (A good movie to test this with is SpiderMan).
 
-### `yarn start`
+[ ] The movie detail page should have the following information at a minimum:
+ - Title
+ - Director
+ - Release Year
+ - Description (if your API provides it)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[ ] Ability to thumbs up or thumbs down the movie (see below)
+ - Implement some type of storage or database to persist movie titles and how many thumbs up or thumbs down they’ve received.
+ - No need to add movies that have not received any votes. A sample table is below.
+    . Movie Title = Ray
+    . Thumbs Up = 48
+    . Thumbs Down = 3
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Clarifications: 
+- No need to handle user login or any sort of authentication.
+- Design and aesthetic is not scored for this phase of the interview, however, these projects will be shared with prospective employers if you become a finalist of YearOne. If front-end or full-stack is your goal, this is a good opportunity to shine. 
+- Additional back-end work/testing is not scored for this phase of the interview, however, these projects will be shared with prospective employers if you become a finalist of YearOne. Testing or further work on the back-end of the API could be a good opportunity to shine if back-end is your goal. 
 
-### `yarn test`
+## Submission Instructions:
+You will be providing us with a link to the repository that holds this project. PLEASE double check that the repository is not private, and can be viewed publicly. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[ ] Please include a README.md file with the following information:
+ - How to setup and run your application
+ - Photos or Gif of your web app (search page and movie detail page) 
+ IMPORTANT! Once completed, you must submit your API repository URL here before November 27th at 11:59 p.m.
+ That’s it!
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ We’ll review your submission and get back to you as soon as we can with next steps. Thank you for your time and efforts during this process. No matter what happens, we wish you all the best in your job search.
