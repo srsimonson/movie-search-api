@@ -45,22 +45,21 @@ class MovieList extends Component {
     }
 
     render() {
-        let titles = this.state.displayMovie.results
-        let posterPath = 'https://image.tmdb.org/t/p/w500'
-        console.log('State: ', titles);
+        let movies = this.state.displayMovie.results
+        console.log('State: ', movies);
         
         return (
             <div>
                 <h1>************************</h1>
                 <h1>MovieList</h1>
                 <div>
-                    {titles && titles.map((title) => (
+                    {movies && movies.map((movie) => (
                         <div>
-                            <li key={title.id}>Title: {title.original_title}</li>
-                            <li> Poster Path: {title.poster_path}</li>
-                            {/* <li>Year: {title.Year}</li> */}
-                            {/* <li>IMDB: {title.imdbID}</li> */}
-                            <img src ="https://image.tmdb.org/t/p/w500/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg" />
+                            <li key={movie.id}>Title: {movie.original_title}</li>
+                            <li> Poster Path: {movie.poster_path}</li>
+                            {/* <li>Year: {movie.Year}</li> */}
+                            {/* <li>IMDB: {movie.imdbID}</li> */}
+                            <img src={'https://image.tmdb.org/t/p/w500' + movie.poster_path} />
                         </div>
                     ))}
                 </div>
