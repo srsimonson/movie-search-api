@@ -16,7 +16,7 @@ class MovieList extends Component {
         console.log('getMovie');
         axios({
             "method":"GET",
-            "url":"https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/inception",
+            "url":"https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/spiderman",
             "headers":{
             "content-type":"application/octet-stream",
             "x-rapidapi-host":"imdb-internet-movie-database-unofficial.p.rapidapi.com",
@@ -37,14 +37,19 @@ class MovieList extends Component {
     }
 
     render() {
-        let title = this.state.displayMovie.titles && this.state.displayMovie.titles[0].title
-        console.log('ML this.state: ', this.state.displayMovie.titles && this.state.displayMovie.titles[0].title);
+        let titles = this.state.displayMovie.titles
+        // let numbers = [1, 2, 3]
+        // console.log('ML title: ', title);
         
         return (
             <div>
                 <h1>************************</h1>
                 <h1>MovieList</h1>
-                    <p>{title}</p>
+                <div>
+                    {titles && titles.map((title) => (
+                        <li key={title.id}>{title.title}</li>
+                    ))}
+                </div>
             </div>
         );
     }

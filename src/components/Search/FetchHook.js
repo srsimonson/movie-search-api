@@ -2,22 +2,10 @@ import React, { Fragment, useState, useEffect } from 'react';
 import axios from 'axios';
 
 function FetchHook() {
-     // hits = hacker news articles
     const [ data, setData ] = useState({ hits: [] });
     const [ query, setQuery ] = useState('Pulp Fiction');
     const [ search, setSearch ] = useState('Pulp Fiction');
     const [ url, setUrl ] = useState(`https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/pulpfiction`)
-
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //     const result = await axios(
-    //         'https://hn.algolia.com/api/v1/search?query=spiderman',
-    //     );
-    //     setData(result.data);
-    //     console.log('FH ALGOLIA result.data: ', result.data);
-    //     };
-    //     fetchData();
-    // }, [] ); // <- useEffect will re-render each time state gets updated, causing an infinite loop. the empty array as the 2nd argument here prevents this. This array exists to tell which variables the hook depends upon to watch update. If empty, then none.
 
     useEffect(() => {
         const fetchData = async () => {
@@ -33,11 +21,11 @@ function FetchHook() {
             });
         setData(result.data);
         console.log('FH IMDB API result.data: ', result.data);
-        console.log('data.hits: ', data.hits);
+        console.log('data.hits 1: ', data.hits);
         
         };
         fetchData();
-    }, [url] ); // <- useEffect will re-render each time state gets updated, causing an infinite loop. the empty array as the 2nd argument here prevents this. Change in 'query' fires the function on event target change.
+    }, [url] ); // <- useEffect will re-render each time state gets updated, causing an infinite loop. the empty array as the 2nd argument here prevents this. Change in 'url' fires the function on event target change.
 
     return (
         <>
