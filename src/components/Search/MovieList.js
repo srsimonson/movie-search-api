@@ -52,15 +52,30 @@ class MovieList extends Component {
             <div>
                 <h1>************************</h1>
                 <h1>MovieList</h1>
+                <form>
+                    <input
+                            type="text"
+                            value='hi'
+                            onChange=''
+                    />
+                    <button 
+                        type="button" 
+                        onClick=''>
+                        Search
+                    </button>
+                </form>
                 <div>
                     {movies && movies.map((movie) => (
-                        <div>
-                            <li key={movie.id}>Title: {movie.original_title}</li>
-                            <li> Poster Path: {movie.poster_path}</li>
-                            {/* <li>Year: {movie.Year}</li> */}
-                            {/* <li>IMDB: {movie.imdbID}</li> */}
-                            <img src={'https://image.tmdb.org/t/p/w500' + movie.poster_path} />
-                        </div>
+                        <ul key={movie.id}>
+                            <li>Title: {movie.original_title}</li>
+                            <li> Release Date: {movie.release_date}</li>
+                            <li> Vote Average: {movie.vote_average}</li>
+                            <li> Popularity: {movie.popularity}</li>
+                            <img src={'https://image.tmdb.org/t/p/w200' + movie.poster_path} />
+                            <p>{movie.overview}</p>
+                            <br/>
+                            <br/>
+                        </ul>
                     ))}
                 </div>
             </div>
