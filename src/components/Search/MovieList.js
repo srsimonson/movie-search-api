@@ -12,6 +12,11 @@ class MovieList extends Component {
         this.getMovie();
     }
 
+    searchMovie = () => {
+        console.log('searchMovie clicked');
+        
+    }
+
     getMovie = () => {
         // axios({
         //     "method":"GET",
@@ -58,16 +63,13 @@ class MovieList extends Component {
                             value='hi'
                             onChange=''
                     />
-                    <button 
-                        type="button" 
-                        onClick=''>
-                        Search
-                    </button>
+                    <button onClick= {this.searchMovie}>Search</button>
                 </form>
                 <div>
                     {movies && movies.map((movie) => (
                         <ul key={movie.id}>
                             <li>Title: {movie.original_title}</li>
+                            <li>Unique ID: {movie.id}</li>
                             <li> Release Date: {movie.release_date}</li>
                             <li> Vote Average: {movie.vote_average}</li>
                             <li> Popularity: {movie.popularity}</li>
