@@ -26,10 +26,10 @@ class App extends Component {
         </a>
       </header>
     </div> */}
-    <FetchHook/>
+    {/* <FetchHook/> */}
     <MovieList/>
     <Thumbs/>
-    <Search/>
+    {/* <Search/> */}
     </>
   );}
 }
