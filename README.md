@@ -3,7 +3,7 @@ We’re building a small web application that allows a user to search for a movi
 
 ## Deliverables:
 
-[ ] Search functionality that allows a user to enter a title and receive back movie information. 
+[x] Search functionality that allows a user to enter a title and receive back movie information. 
  - (Choose a free API for movie data. https://rapidapi.com/collection/movie-apis OR any API that provides this info!)
 
 [ ] A user should be able to look through title results, if there are more than one, and choose one to read more about. 

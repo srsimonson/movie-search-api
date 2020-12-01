@@ -37,6 +37,8 @@ class MovieList extends Component {
         })
     }
     getMovie = () => {
+        console.log('in get movie');
+        
         // axios({
         //     "method":"GET",
         //     "url":"https://movie-database-imdb-alternative.p.rapidapi.com/",
@@ -52,25 +54,25 @@ class MovieList extends Component {
         //         "i":"tt0100669"
         //     }
         // })
-        axios({
-            'method': 'GET',
-            'url': `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&query=inception`
-        })
-            .then((result) => {
-            this.setState({
-                displayMovie: result.data
-            })
-            console.log('result:', result);
+        // axios({
+        //     'method': 'GET',
+        //     'url': `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&query=inception`
+        // })
+        //     .then((result) => {
+        //     this.setState({
+        //         displayMovie: result.data
+        //     })
+        //     console.log('result:', result);
             
-        })
-        .catch(error => {
-            console.log('Error with GET in MovieList.js', error);
-        })
+        // })
+        // .catch(error => {
+        //     console.log('Error with GET in MovieList.js', error);
+        // })
     }
 
     render() {
         let movies = this.state.displayMovie.results
-        console.log('State: ', movies);
+        // console.log('State: ', movies);
         
         return (
             <div>
