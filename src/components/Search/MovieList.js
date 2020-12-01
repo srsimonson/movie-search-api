@@ -5,18 +5,37 @@ import axios from 'axios';
 class MovieList extends Component {
 
     state = {
-        displayMovie: []
+        displayMovie: [],
+        searchTerm: ''
     }
 
-    componentDidMount() {
-        this.getMovie();
+    // componentDidMount() {
+    //     this.getMovie();
+    // }
+
+    handleChange = (e) => {
+        this.setState({
+            searchTerm: e.target.value
+        })
     }
 
     searchMovie = () => {
-        console.log('searchMovie clicked');
-        
+        console.log('searchTerm: ', this.state.searchTerm);
+        axios({
+            'method': 'GET',
+            'url': `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&query=${this.state.searchTerm}`
+        })
+            .then((result) => {
+            this.setState({
+                displayMovie: result.data
+            })
+            console.log('result:', result);
+            
+        })
+        .catch(error => {
+            console.log('Error with GET in MovieList.js', error);
+        })
     }
-
     getMovie = () => {
         // axios({
         //     "method":"GET",
@@ -35,7 +54,7 @@ class MovieList extends Component {
         // })
         axios({
             'method': 'GET',
-            'url': `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&query=spiderman`
+            'url': `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&query=inception`
         })
             .then((result) => {
             this.setState({
@@ -58,12 +77,8 @@ class MovieList extends Component {
                 <h1>************************</h1>
                 <h1>MovieList</h1>
                 <form>
-                    <input
-                            type="text"
-                            value='hi'
-                            onChange=''
-                    />
-                    <button onClick= {this.searchMovie}>Search</button>
+                <input onChange={this.handleChange}></input>
+                <button onClick={this.searchMovie}>Search Movie</button>
                 </form>
                 <div>
                     {movies && movies.map((movie) => (

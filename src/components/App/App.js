@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import FetchHook from '../../components/Search/FetchHook';
 import MovieList from '../../components/Search/MovieList';
+import MovieSearch from '../../components/Search/MovieSearch';
 import Search from '../../components/Search/Search';
 import Thumbs from '../../components/Search/Thumbs';
 
@@ -27,6 +28,7 @@ class App extends Component {
       </header>
     </div> */}
     {/* <FetchHook/> */}
+    {/* <MovieSearch /> */}
     <MovieList/>
     <Thumbs/>
     {/* <Search/> */}
