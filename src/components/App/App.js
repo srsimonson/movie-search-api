@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 // import logo from '../../logo.svg';
 import './App.css';
-import FetchHook from '../../components/Search/FetchHook';
-import MovieList from '../../components/Search/MovieList';
-import MovieSearch from '../../components/Search/MovieSearch';
-import Search from '../../components/Search/Search';
-import Thumbs from '../../components/Search/Thumbs';
+import FetchHook from '../Tests/FetchHook';
+import MovieList from '../Tests/MovieList';
+import MovieSearch from '../Tests/MovieSearch';
+import SearchHook from '../Tests/SearchHook';
+import Thumbs from '../Tests/Thumbs';
+import SearchForm from '../Search/SearchForm';
+import SearchList from '../Search/SearchList';
 
 class App extends Component {
   render() {
@@ -27,11 +29,13 @@ class App extends Component {
         </a>
       </header>
     </div> */}
-    {/* <FetchHook/> */}
+    <SearchForm />
+    {/* <SearchList /> */}
+    {/* <FetchHook /> */}
     {/* <MovieSearch /> */}
-    <MovieList/>
-    <Thumbs/>
-    {/* <Search/> */}
+    {/* <MovieList /> */}
+    {/* <Thumbs /> */}
+    {/* <SearchHook /> */}
     </>
   );}
 }
