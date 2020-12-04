@@ -7,6 +7,7 @@ class SearchForm extends Component {
     state = {
         searchTerm: '',
         searchResults: [],
+        seven: 7,
     }
 
     handleSearchChange = (e) => {
@@ -26,7 +27,7 @@ class SearchForm extends Component {
             this.setState({
                 searchResults: result.data
             })
-            console.log('result:', result);
+            // console.log('result:', result);
             
         })
         .catch(error => {
@@ -35,15 +36,33 @@ class SearchForm extends Component {
     }
 
     render() {
+        const greeting = "Welcome to React"
+        console.log('this.state.searchResults.results: ', this.state.searchResults.results);
+        
         return (
             <div>
                 <h1>SearchForm.js</h1>
+                <div>
+                    <Greeting greeting={greeting}/>
+                </div>
                     <form>
                         <input onChange={this.handleSearchChange}></input>
                         <button onClick={this.searchMovie}>Search</button>
                     </form>
-                <SearchList searchResults={this.state.searchResults}/>
+                <SearchList 
+                    searchResults={this.state.searchResults.results}
+                    hereIsA7={this.state.seven}   
+                />
             </div>
+        )
+    }
+}
+
+class Greeting extends Component {
+    render() {
+        // const greeting = 'Welcome to React'
+        return (
+            <h1>{this.props.greeting}</h1>
         )
     }
 }
