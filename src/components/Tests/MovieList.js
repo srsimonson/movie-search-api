@@ -20,7 +20,7 @@ class MovieList extends Component {
     }
 
     searchMovie = () => {
-        console.log('searchTerm: ', this.state.searchTerm);
+        // console.log('searchTerm: ', this.state.searchTerm);
         axios({
             'method': 'GET',
             'url': `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&query=${this.state.searchTerm}`

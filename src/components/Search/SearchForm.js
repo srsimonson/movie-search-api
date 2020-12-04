@@ -7,7 +7,6 @@ class SearchForm extends Component {
     state = {
         searchTerm: '',
         searchResults: [],
-        seven: 7,
     }
 
     handleSearchChange = (e) => {
@@ -18,7 +17,7 @@ class SearchForm extends Component {
 
     searchMovie = (e) => {
         e.preventDefault();
-        console.log('searchTerm: ', this.state.searchTerm);
+        // console.log('searchTerm: ', this.state.searchTerm);
         axios({
             'method': 'GET',
             'url': `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&query=${this.state.searchTerm}`
@@ -36,33 +35,17 @@ class SearchForm extends Component {
     }
 
     render() {
-        const greeting = "Welcome to React"
-        console.log('this.state.searchResults.results: ', this.state.searchResults.results);
+        // console.log('this.state.searchResults.results: ', this.state.searchResults.results);
         
         return (
             <div>
                 <h1>SearchForm.js</h1>
-                <div>
-                    <Greeting greeting={greeting}/>
-                </div>
                     <form>
                         <input onChange={this.handleSearchChange}></input>
                         <button onClick={this.searchMovie}>Search</button>
                     </form>
-                <SearchList 
-                    searchResults={this.state.searchResults.results}
-                    hereIsA7={this.state.seven}   
-                />
+                <SearchList searchResults={this.state.searchResults.results} />
             </div>
-        )
-    }
-}
-
-class Greeting extends Component {
-    render() {
-        // const greeting = 'Welcome to React'
-        return (
-            <h1>{this.props.greeting}</h1>
         )
     }
 }

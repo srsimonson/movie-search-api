@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import SearchForm from './SearchForm' 
+// import SearchForm from './SearchForm' 
 
 class SearchList extends Component {
     render() {
         if (typeof this.props.searchResults !== 'undefined') {
-            console.log('XXXMXXMM XM XMM X: ', this.props.searchResults);
             return (
                 <div>
                     <h4>Movies:</h4>
@@ -18,7 +17,7 @@ class SearchList extends Component {
             )
         } else {
             return (
-                <h4>Nothing has been searched yet...</h4>
+                <h4>Movies:</h4>
             )
         }
     }
