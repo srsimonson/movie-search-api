@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 // import logo from '../../logo.svg';
 import './App.css';
-import FetchHook from '../Tests/FetchHook';
-import MovieList from '../Tests/MovieList';
-import MovieSearch from '../Tests/MovieSearch';
-import SearchHook from '../Tests/SearchHook';
-import Thumbs from '../Tests/Thumbs';
+// import FetchHook from '../Tests/FetchHook';
+// import MovieList from '../Tests/MovieList';
+// import MovieSearch from '../Tests/MovieSearch';
+// import SearchHook from '../Tests/SearchHook';
+// import Thumbs from '../Tests/Thumbs';
 import SearchForm from '../Search/SearchForm';
-import SearchList from '../Search/SearchList';
+// import SearchList from '../Search/SearchList';
 import { HashRouter as Router, Route, Link} from 'react-router-dom';
 
 class App extends Component {

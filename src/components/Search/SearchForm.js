@@ -27,7 +27,7 @@ class SearchForm extends Component {
             this.setState({
                 searchResults: result.data
             })
-            // console.log('result:', result);
+            // console.log('result.data:', result.data.results);
             
         })
         .catch(error => {
