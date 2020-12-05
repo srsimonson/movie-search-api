@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import SearchList from './SearchList'
+import MovieDetails from '../MoviePage/MovieDetails'
 
 class SearchForm extends Component {
 
@@ -44,6 +45,7 @@ class SearchForm extends Component {
                         <input onChange={this.handleSearchChange}></input>
                         <button onClick={this.searchMovie}>Search</button>
                     </form>
+                <MovieDetails />
                 <SearchList searchResults={this.state.searchResults.results} />
             </div>
         )

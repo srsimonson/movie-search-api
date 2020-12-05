@@ -8,6 +8,7 @@ import SearchHook from '../Tests/SearchHook';
 import Thumbs from '../Tests/Thumbs';
 import SearchForm from '../Search/SearchForm';
 import SearchList from '../Search/SearchList';
+import { HashRouter as Router, Route, Link} from 'react-router-dom';
 
 class App extends Component {
   render() {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import SearchForm from './SearchForm' 
 
 class SearchList extends Component {
     render() {
