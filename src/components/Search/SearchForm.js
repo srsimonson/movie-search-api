@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import SearchList from './SearchList'
 import MovieDetails from '../MoviePage/MovieDetails'
+import { atom, Provider } from 'jotai';
+
+export const countAtom = atom(0);
+export const countryAtom = atom('Japan');
 
 class SearchForm extends Component {
 
@@ -45,7 +49,9 @@ class SearchForm extends Component {
                         <input onChange={this.handleSearchChange}></input>
                         <button onClick={this.searchMovie}>Search</button>
                     </form>
-                <MovieDetails />
+                    <Provider>
+                        <MovieDetails />
+                    </Provider>
                 <SearchList searchResults={this.state.searchResults.results} />
             </div>
         )

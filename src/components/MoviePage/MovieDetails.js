@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import { useAtom } from 'jotai';
+import { countAtom, countryAtom } from "../Search/SearchForm";
 
-class MovieDetails extends Component {
-  render() {
-    return (
-      <div>
-        <h4>MovieDetails.js</h4>
-      </div>
-    )
-  }
+function Counter() {
+  const [count, setCount] = useAtom(countAtom)
+  const country = useAtom(countryAtom);
+  return (
+    <>
+    <h1>{count}</h1>
+    <button onClick={()=> setCount((value) => value +1)}>one up</button>
+    <p>{country}</p>
+    </>
+  )
 }
 
-export default MovieDetails;
+export default Counter;
